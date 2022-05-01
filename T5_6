@@ -1,0 +1,28 @@
+/*FileName:   T5_06.cpp
+  *Author:     Zehong Yang
+  *E-mail:     2579510685@qq.com
+  *Date:       Mar 24th ,2022
+  *College:    School of Computer Science and Information Engineering
+  *Function:   整数求平均值
+*/
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int sum;  //数的和
+	int ave;  //数的平均值
+	int i;    //计数器
+	int a;    //每次输入的数值
+	sum = 0;
+	for ( i=1 ; ; i++ )
+	{
+		cin >> a;
+		if (a == 9999) { i = i - 1; break; }//当次也被记入，因此应减一
+		sum = sum + a;//每次的值加和到 sum 之中
+	}
+	ave = sum / i;
+	cout << ave << endl;
+	return 0;
+}
