@@ -1,0 +1,29 @@
+/*
+Filename:T5_19.cpp
+Author:  Zehong Yang
+E-mail:  2579510685@qq.com
+Date:    Mar 28th, 2022
+College: School of Computer Science and InformationEngineering
+Function:求圆周率
+*/
+#include <iostream>
+#include<math.h>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+    int i,n;
+    double sum=0,a;
+    cout<<"请输入项数"<<endl;
+    cin>>n;
+    for(i=1;i<=n;i++)
+    {
+
+
+        a=pow(-1,i+1)*4/(2*i-1);
+        sum+=a;
+        cout<<"取前"<<i<<"项\t"<<"Π近似为"<<sum<<endl;
+    }
+    return 0;
+}
