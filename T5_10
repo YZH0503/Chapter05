@@ -1,0 +1,26 @@
+/*FileName:   T5_10.cpp
+  *Author:     Zehong Yang
+  *E-mail:     2579510685@qq.com
+  *Date:       Mar 30th ,2022
+  *College:    School of Computer Science and Information Engineering
+  *Function:   ¼ÆËã½×³Ë
+*/
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int i, j;//¼ÆÊýÆ÷
+	int a;//½×³Ë
+	for (i = 1; i <= 5;i++)
+	{
+		a = 1;
+		for (j = i;j > 0;j--)
+		{
+			a = a * j;
+		}
+		cout << i << "!=" << a << endl;
+	}
+	return 0;
+}
