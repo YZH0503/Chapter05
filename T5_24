@@ -1,0 +1,50 @@
+/*
+Filename:T5_24.cpp
+Author:  Zehong Yang
+E-mail:  2579510685@qq.com
+Date:    Mar 28th, 2022
+College: School of Computer Science and InformationEngineering
+Function:修改星号组成的菱形图案
+*/
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int n;//行数
+	int i, j;//计数器
+	cout << "请输入指定菱形的行数：";
+	cin >> n;
+	int a = n / 2 + 1;
+	for (i = 1;i <= a;++i)
+	{
+		for (j = a;j >= 1;--j)
+		{
+			if (j <= i) { cout << "*"; }
+			else { cout << " "; }
+		}
+		for (j = 2;j <= a ;++j)
+		{
+			if (j <= i) { cout << "*"; }
+			else { cout << " "; }
+		}
+		cout << endl;
+	}
+	for (i = a - 1;i >= 1;--i)
+	{
+		for (j = a;j >= 1;--j)
+		{
+			if (j <= i) { cout << "*"; }
+			else { cout << " "; }
+		}
+		for (j = 2;j <= a;++j)
+		{
+			if (j <= i) { cout << "*"; }
+			else { cout << " "; }
+		}
+		cout << endl;
+	}
+
+	return 0;
+}
