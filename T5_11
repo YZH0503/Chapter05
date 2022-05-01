@@ -1,0 +1,42 @@
+/*FileName:   T5_11.cpp
+  *Author:     Zehong Yang
+  *E-mail:     2579510685@qq.com
+  *Date:       Mar 30th ,2022
+  *College:    School of Computer Science and Information Engineering
+  *Function:   计算复利
+*/
+#include<iostream>
+
+#include<cmath>
+
+#include<iomanip>
+
+using namespace std;
+
+int main()
+{
+	double a;//每次增加的倍率
+	double r;//年利率
+	double amount;//每年结余
+	double principal = 1000.0;//本金
+	int b;//判断
+	for (; ; )
+	{
+		cout << "请输入您所需计算的年利率：";
+		cin >> r;
+		a = 1.0 + r;//每次增加的倍率
+		cout << setw(4) << "Year" << setw(21) << "Amount on deposit" << endl;
+		cout << fixed << setprecision(2);//规定输出两位小数
+		for (int year = 1;year <= 10;++year)
+		{
+			amount = principal * pow(a, year);
+			cout << setw(4) << year << setw(21) << amount << endl;
+		}
+		cout << "若要继续使用，请输入：1 停止使用请输入：0" << endl;
+		cout << "请输入：" << endl;
+		cin >> b;
+		if (b != 0 && b != 1) { cout << "您的输入不符合要求！" << endl << "若要继续使用，请输入：1 停止使用请输入：0"; }
+		if (b == 0) { break; }
+	}
+	return 0;
+}
