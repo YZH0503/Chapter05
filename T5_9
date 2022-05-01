@@ -1,0 +1,26 @@
+/*FileName:   T5_09.cpp
+  *Author:     Zehong Yang
+  *E-mail:     2579510685@qq.com
+  *Date:       Mar 30th ,2022
+  *College:    School of Computer Science and Information Engineering
+  *Function:  奇整数的乘积
+*/
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int i;//计数器
+	int a;//乘积
+	a = 1;//初始化
+	for (i = 1; i <= 15; i++)
+	{
+		if (i % 2 == 1)
+		{
+			a = a * i;
+		}
+	}
+	cout << "1~15中的奇数的乘积为：" << a << endl;
+	return 0;
+}
