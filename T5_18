@@ -1,0 +1,28 @@
+/*
+Filename:T5_18.cpp
+Author:  Zehong Yang
+E-mail:  2579510685@qq.com
+Date:    Mar 28th, 2022
+College: School of Computer Science and InformationEngineering
+Function:打印一张表，输出1--256内每个十进制数对应的二进制数
+*/
+#include <iostream>
+using namespace std;
+
+int main() {
+	for(int i = 1; i <= 256; i++)
+    {
+		int flag = 1, num = i;
+		for(int j = 256; j > 0; j /= 2)
+		{
+			if(num / j != 0 || flag == 0)
+			{
+				cout << num / j;
+				flag = 0;
+				num %= j;
+			}
+		}
+		cout << "\t" << oct << i << "\t" << hex << i << endl;
+	}
+	return 0;
+}
